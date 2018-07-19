@@ -5,4 +5,6 @@ export interface ListState {
     language: string;
     items: string[];
     filterTerm: string;
+    page: number;
+    totalItems: number;
 }
