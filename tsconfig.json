@@ -18,7 +18,9 @@
       "es2017",
       "dom",
       "es2017.object"
-    ]
+    ],
+    "module": "es2015",
+    "baseUrl": "./"
   },
   "angularCompilerOptions": {
     "preserveWhitespaces": "off"
