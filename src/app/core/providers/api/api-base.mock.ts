@@ -1,14 +1,14 @@
-import { Headers, Http, Request, RequestMethod, Response, ResponseOptions } from '@angular/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
 
 import { MockI18nNotification } from '../i18n-notification/i18n-notification.service.mock';
 
-import { ApiBase } from './api-base.service';
+import { ApiBase, RequestMethodString } from './api-base.service';
 
 /** Only available in testing. A request tracked by {@link MockApiBase}. */
 export declare class MockedApiRequest {
-    method: 'GET' | 'POST' | 'DELETE' | 'PATCH' | 'PUT';
+    method: RequestMethodString;
     url: string;
     params: any;
     body: any;
@@ -33,18 +33,18 @@ export class MockApiBase extends ApiBase {
 
     constructor() {
         // Provide a spy Http service to ApiBase, we don't want to do actual http calls in unit tests.
-        super((undefined as any) as string, (undefined as any) as Http, new MockI18nNotification() as any);
+        super((undefined as any) as string, (undefined as any) as HttpClient, new MockI18nNotification() as any);
         this.http = ({
             request: (r: Request) => this.interceptHttpRequest(r)
-        } as any) as Http;
+        } as any) as HttpClient;
     }
 
-    protected request(method: RequestMethod, url: string, params: any = {}, body?: any, extraHeaders?: any): any {
+    protected request(method: RequestMethodString, url: string, params: any = {}, body?: any, extraHeaders?: any): any {
         const result = super.request(method, url, params, body);
 
         // Add the passed arguments to the tracked request.
         // They are not available on the actual `Request` object.
-        this.lastRequest.method = requestMethodToString(method);
+        this.lastRequest.method = method;
         this.lastRequest.body = body === null ? undefined : body;
         this.lastRequest.url = url;
         this.lastRequest.params = params;
@@ -54,9 +54,9 @@ export class MockApiBase extends ApiBase {
     }
 
     /** Intercepts requests made via Angulars `Http` service and stores them on this instance. */
-    private interceptHttpRequest(request: Request): Observable<Response> {
+    private interceptHttpRequest(request: Request): Observable<HttpResponse<any>> {
         const trackedRequest = {} as MockedApiRequest;
-        const returnedObservable = new Subject<Response>();
+        const returnedObservable = new Subject<HttpResponse<any>>();
 
         // Add a non-enumerable "respond" method
         Object.defineProperty(trackedRequest, 'respond', {
@@ -64,44 +64,20 @@ export class MockApiBase extends ApiBase {
             enumerable: false,
             writable: true,
             value: (status: number, body: any) => {
-                const response = new Response(
-                    new ResponseOptions({
-                        body: JSON.stringify(body),
-                        headers: new Headers({
-                            'Content-Type': 'application/json'
-                        }),
-                        status,
-                        url: request.url
-                    })
-                );
+                const response = new HttpResponse({
+                    body: JSON.stringify(body),
+                    headers: new HttpHeaders({
+                        'Content-Type': 'application/json'
+                    }),
+                    status,
+                    url: request.url
+                });
                 returnedObservable.next(response);
                 returnedObservable.complete();
                 trackedRequest.respond = () => {};
             }
         });
         this.allRequests.push((this.lastRequest = trackedRequest));
-        return returnedObservable as Observable<Response>;
-    }
-}
-
-function requestMethodToString(method: string | RequestMethod): typeof MockedApiRequest.prototype.method {
-    switch (method) {
-        case 'DELETE':
-        case RequestMethod.Delete:
-            return 'DELETE';
-        case 'GET':
-        case RequestMethod.Get:
-            return 'GET';
-        case 'POST':
-        case RequestMethod.Post:
-            return 'POST';
-        case 'PATCH':
-        case RequestMethod.Patch:
-            return 'PATCH';
-        case 'PUT':
-        case RequestMethod.Put:
-            return 'PUT';
-        default:
-            return '[invalid request method]' as any;
+        return returnedObservable;
     }
 }
