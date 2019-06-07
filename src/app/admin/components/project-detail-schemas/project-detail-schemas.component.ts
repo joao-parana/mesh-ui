@@ -1,10 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { BehaviorSubject ,  Observable ,  Subject ,  combineLatest } from 'rxjs';
 
 import { SchemaReference } from '../../../common/models/common.model';
 import { Project } from '../../../common/models/project.model';

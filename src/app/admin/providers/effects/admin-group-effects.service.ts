@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { head, values } from 'ramda';
 import * as GroupQuery from 'raw-loader!./admin-group-query.gql';
 import * as GroupsQuery from 'raw-loader!./admin-groups-query.gql';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { GroupCreateRequest, GroupUpdateRequest } from '../../../common/models/server-models';
 import { extractGraphQlResponse } from '../../../common/util/util';

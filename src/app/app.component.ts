@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { ApplicationStateDevtools } from './state/providers/application-state-devtools';
 import { ApplicationStateService } from './state/providers/application-state.service';

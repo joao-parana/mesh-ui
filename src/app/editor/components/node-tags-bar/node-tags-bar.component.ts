@@ -11,8 +11,7 @@ import {
     ViewChild
 } from '@angular/core';
 import { InputField, ModalService } from 'gentics-ui-core';
-import { Subject } from 'rxjs/Subject';
-import { Subscription } from 'rxjs/Subscription';
+import { Subject ,  Subscription } from 'rxjs';
 
 import { MeshNode } from '../../../common/models/node.model';
 import { TagReferenceFromServer } from '../../../common/models/server-models';

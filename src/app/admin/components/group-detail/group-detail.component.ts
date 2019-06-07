@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { BREADCRUMBS_BAR_PORTAL_ID } from '../../../common/constants';
 import { GroupCreateRequest, GroupUpdateRequest } from '../../../common/models/server-models';

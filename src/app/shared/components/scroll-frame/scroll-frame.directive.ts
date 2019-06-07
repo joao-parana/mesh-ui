@@ -1,5 +1,5 @@
 import { Directive, ElementRef } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 /**
  * The ScrollFrame directive should be attached to scrollable divs (i.e. divs with `overflow-y: auto`).

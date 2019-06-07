@@ -14,8 +14,7 @@ import {
     ViewContainerRef
 } from '@angular/core';
 import { ISortableEvent, ISortableGroupOptions, ISortableMoveEvent } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
+import { Observable ,  Subscription } from 'rxjs';
 
 import { Microschema } from '../../../common/models/microschema.model';
 import { ListField, ListNodeFieldType, NodeFieldType } from '../../../common/models/node.model';

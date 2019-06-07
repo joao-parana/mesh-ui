@@ -1,6 +1,5 @@
 import { Injectable, OnDestroy } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable ,  Subject } from 'rxjs';
 
 import { UserCreateRequest } from '../../../common/models/server-models';
 import { AdminUserEffectsService } from '../effects/admin-user-effects.service';

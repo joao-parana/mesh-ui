@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
+import { Observable ,  Subscription } from 'rxjs';
 
 import { BinaryField, MeshNode } from '../../../common/models/node.model';
 import { Schema, SchemaField } from '../../../common/models/schema.model';

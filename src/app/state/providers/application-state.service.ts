@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ImmutableStateStore, TrackedMethodCall } from 'immutablets';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
-import { Subscription } from 'rxjs/Subscription';
+import { BehaviorSubject ,  Observable ,  Subscription } from 'rxjs';
 
 import { ConfigService } from '../../core/providers/config/config.service';
 import { AppState } from '../models/app-state.model';

@@ -2,9 +2,7 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnIni
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'gentics-ui-core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Subject } from 'rxjs/Subject';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { BehaviorSubject ,  Subject ,  combineLatest } from 'rxjs';
 
 import { MeshDialogsService } from '../../../core/providers/dialogs/mesh-dialogs.service';
 import { I18nService } from '../../../core/providers/i18n/i18n.service';

@@ -1,8 +1,7 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalService } from 'gentics-ui-core/dist/components/modal/modal.service';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable ,  Subject } from 'rxjs';
 
 import { MeshPreviewUrl, MeshPreviewUrlResolver } from '../../../common/models/appconfig.model';
 import { MeshNode } from '../../../common/models/node.model';

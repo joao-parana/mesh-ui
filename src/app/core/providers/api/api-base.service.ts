@@ -1,6 +1,7 @@
+
+import {throwError as observableThrowError,  Observable } from 'rxjs';
 import { HttpClient, HttpHeaders, HttpRequest, HttpResponse } from '@angular/common/http';
 import { Inject, Injectable, Optional } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 
 import { ApiEndpoints } from '../../../common/models/server-models';
 import { I18nNotification } from '../i18n-notification/i18n-notification.service';
@@ -180,7 +181,7 @@ export class ApiBase {
                     // The function `toResponseObservable` will wrap it accordingly.
                     return Observable.of(errorOrResponse);
                 } else {
-                    return Observable.throw(new ApiError({ url, request, originalError: errorOrResponse }));
+                    return observableThrowError(new ApiError({ url, request, originalError: errorOrResponse }));
                 }
             })
             .map((response: HttpResponse<any>) => {

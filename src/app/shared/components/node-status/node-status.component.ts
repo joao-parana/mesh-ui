@@ -9,9 +9,7 @@ import {
     OnChanges,
     OnDestroy
 } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject ,  Observable ,  Subject } from 'rxjs';
 
 import { MeshNode } from '../../../common/models/node.model';
 import { PublishStatusModelFromServer } from '../../../common/models/server-models';

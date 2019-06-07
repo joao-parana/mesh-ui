@@ -2,9 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core
 import { IBreadcrumbLink, IModalDialog } from 'gentics-ui-core';
 import * as esGqlQuery from 'raw-loader!./es-query.gql';
 import * as gqlQuery from 'raw-loader!./query.gql';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { BehaviorSubject ,  Observable ,  Subject } from 'rxjs';
 import { filter, flatMap, map, share } from 'rxjs/operators';
 
 import { notNullOrUndefined } from '../../../common/util/util';

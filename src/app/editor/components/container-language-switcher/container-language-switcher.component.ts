@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Observable ,  combineLatest } from 'rxjs';
 import { MeshNode } from '../../../common/models/node.model';
 import { concatUnique, notNullOrUndefined } from '../../../common/util/util';
 import { ConfigService } from '../../../core/providers/config/config.service';

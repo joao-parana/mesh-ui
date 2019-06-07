@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router, RouteConfigLoadEnd } from '@angular/router';
 import { IBreadcrumbRouterLink } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { BREADCRUMBS_BAR_PORTAL_ID } from '../../../common/constants';
 import { I18nService } from '../../../core/providers/i18n/i18n.service';

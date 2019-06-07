@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { forkJoin } from 'rxjs/observable/forkJoin';
+import { Observable ,  forkJoin } from 'rxjs';
 
 import { MicroschemaReference } from '../../../common/models/common.model';
 import { Microschema } from '../../../common/models/microschema.model';

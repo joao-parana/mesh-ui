@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { Subject } from 'rxjs/Subject';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Subject ,  combineLatest } from 'rxjs';
 
 import { Tag } from '../../../common/models/tag.model';
 import { fuzzyMatch } from '../../../common/util/fuzzy-search';

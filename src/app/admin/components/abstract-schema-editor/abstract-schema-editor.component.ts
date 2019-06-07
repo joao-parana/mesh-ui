@@ -21,8 +21,7 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ModalService, SortableItem } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
+import { Observable ,  Subject } from 'rxjs';
 
 import { ADMIN_USER_NAME } from '../../../common/constants';
 import { Microschema } from '../../../common/models/microschema.model';

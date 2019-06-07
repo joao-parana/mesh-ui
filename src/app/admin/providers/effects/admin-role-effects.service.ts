@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { head, values } from 'ramda';
 import * as RoleQuery from 'raw-loader!./admin-role-query.gql';
 import * as RolesQuery from 'raw-loader!./admin-roles-query.gql';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { RoleCreateRequest, RoleUpdateRequest } from '../../../common/models/server-models';
 import { extractGraphQlResponse } from '../../../common/util/util';

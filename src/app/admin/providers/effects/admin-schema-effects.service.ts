@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { reject } from 'bluebird';
 import { Notification } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { Microschema } from '../../../common/models/microschema.model';
 import { Schema } from '../../../common/models/schema.model';

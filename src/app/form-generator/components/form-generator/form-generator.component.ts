@@ -16,9 +16,7 @@ import {
     ViewContainerRef
 } from '@angular/core';
 import { SplitViewContainer } from 'gentics-ui-core';
-import { Subject } from 'rxjs/Subject';
-import { Subscription } from 'rxjs/Subscription';
-import { merge } from 'rxjs/observable/merge';
+import { Subject ,  Subscription ,  merge } from 'rxjs';
 
 import { MeshNode, NodeFieldType } from '../../../common/models/node.model';
 import { Schema } from '../../../common/models/schema.model';

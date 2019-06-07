@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs/Subscription';
+import { Subscription } from 'rxjs';
 
 import { ApplicationStateService } from '../../../state/providers/application-state.service';
 import { AuthEffectsService } from '../../providers/auth-effects.service';

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { forkJoin } from 'rxjs/observable/forkJoin';
+import { Observable ,  forkJoin } from 'rxjs';
 
 import { MeshNode } from '../../../common/models/node.model';
 import { SchemaField } from '../../../common/models/schema.model';

@@ -2,9 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@a
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Observable ,  Subject ,  combineLatest } from 'rxjs';
 
 import { ADMIN_USER_NAME } from '../../../common/constants';
 import { Schema } from '../../../common/models/schema.model';

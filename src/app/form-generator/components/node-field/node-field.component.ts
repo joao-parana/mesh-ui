@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, Input, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Subject } from 'rxjs';
 
 import { MeshNode, NodeField, NodeFieldType } from '../../../common/models/node.model';
 import { SchemaField } from '../../../common/models/schema.model';

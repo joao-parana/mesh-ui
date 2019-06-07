@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { ApplicationStateService } from '../../../state/providers/application-state.service';
 import { ConfigService } from '../../providers/config/config.service';

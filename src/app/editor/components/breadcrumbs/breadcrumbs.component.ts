@@ -1,6 +1,6 @@
 import { AfterViewChecked, Component, OnInit } from '@angular/core';
 import { IBreadcrumbRouterLink } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { MeshNode } from '../../../common/models/node.model';
 import { Project } from '../../../common/models/project.model';

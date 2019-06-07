@@ -1,5 +1,5 @@
 import { TranslateLoader } from '@ngx-translate/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 const translationFiles = ['admin', 'auth', 'common', 'editor', 'lang', 'list', 'modal', 'nodebrowser'].reduce(
     (hash, name) => {

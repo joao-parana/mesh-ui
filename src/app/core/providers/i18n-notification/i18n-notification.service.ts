@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { INotificationOptions, Notification as BaseNotification } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
-import { OperatorFunction } from 'rxjs/interfaces';
+import { Observable ,  OperatorFunction } from 'rxjs';
 
 import { I18nService } from '../i18n/i18n.service';
 

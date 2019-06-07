@@ -2,9 +2,7 @@ import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalService } from 'gentics-ui-core';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
-import { combineLatest } from 'rxjs/observable/combineLatest';
+import { Observable ,  Subject ,  combineLatest } from 'rxjs';
 
 import { Project } from '../../../common/models/project.model';
 import { ProjectResponse } from '../../../common/models/server-models';
