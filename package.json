@@ -9,7 +9,7 @@
     "build": "ng build --prod",
     "generate-models": "node config/build-models-from-raml",
     "test": "ng test",
-    "test-no-sourcemaps": "ng test -sm=false --browsers=ChromeHeadless",
+    "test-no-sourcemaps": "ng test --browsers ChromeHeadless",
     "lint": "ng lint",
     "preinstall": "node ./check-if-yarn-is-used",
     "e2e": "ng e2e --proxy-config proxy.conf.json",
