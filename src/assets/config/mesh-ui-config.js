@@ -1,12 +1,13 @@
 /* MESH UI configuration file */
 
 window.MeshUiConfig = {
+    // https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
     /** The ISO-639-1 code of the default language */
     defaultLanguage: 'en',
     /** The ISO-639-1 codes of the available languages for the frontend app */
     uiLanguages: ['en', 'de'],
     /** The ISO-639-1 codes of the available languages for Mesh */
-    contentLanguages: ['en', 'de'],
+    contentLanguages: ['en', 'de', 'pt', 'es'],
     /** The ISO-639-1 code of the language to be used in case a requested ressource is not available in the requested langauge */
     fallbackLanguage: 'en',
     /** This is the credential username for a ressource requested without authentication */
